@@ -1,6 +1,7 @@
 class Calculator
 {
 public:
+	void calculator(){}
 
 	int add(int x, int y)
 	{
