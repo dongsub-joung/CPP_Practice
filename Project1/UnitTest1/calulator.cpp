@@ -1,10 +1,8 @@
-#include <iostream>
-
-using namespace std;
-
 class Calculator
 {
 public:
+	//»ý¼ºÀÚ
+	Calculator(){}
 
 	int add(const int x, const int y)
 	{
