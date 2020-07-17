@@ -14,11 +14,16 @@ namespace Testcalculater
 			int x = 4;
 			int y = 2;
 			Calculator cal;
-			cal.add(x, y);
-			cal.sub(x,y);
-			cal.div(x,y);
-			cal.mult(x,y);
-			cal.factorial(x);
+			int add = cal.add(x, y);
+			Assert::AreEqual(x + y, add);
+			int sub = cal.sub(x,y);
+			Assert::AreEqual(x - y, sub);
+			int div = cal.div(x,y);
+			Assert::AreEqual(x /y, div);
+			int mul = cal.mult(x,y);
+			Assert::AreEqual(x * y, mul);
+			int fac = cal.factorial(x);
+			Assert::AreEqual(4*3*2*1, fac);
 		}
 	};
 }
