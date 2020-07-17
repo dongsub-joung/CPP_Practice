@@ -163,11 +163,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Test calculater.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\82109\Documents\GitHub\cpp\calculater2\calculater2</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\정인섭\Documents\GitHub\cpp\calculater2\calculater2\calculater.cpp</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\calculater2\calculater.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
