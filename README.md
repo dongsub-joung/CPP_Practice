@@ -1,6 +1,6 @@
 # C++ Practice on TDD
 
-## 5주 인턴
+## C++ Practice
 
 ### 1WEEK
-+ Calculator Unit test, TDD theory
++ Calculator Unit test
