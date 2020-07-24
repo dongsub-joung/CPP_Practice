@@ -1,0 +1,2 @@
+C:\Users\82109\Documents\GitHub\cpp\calculater4\Debug\StaticLib_Calculater.pdb
+C:\Users\82109\Documents\GitHub\cpp\calculater4\StaticLib_Calculater\Debug\StaticLib_Calculater.pdb
