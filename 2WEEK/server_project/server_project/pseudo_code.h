@@ -1,82 +1,205 @@
-struct USER_INFO	// **사용자를 표현하기 위한 기본 자료구조
+#include <iostream>
+
+
+//m_arrary_index= id값 배열의 크기를 리턴한 값이다.
+
+struct UserInfo   // **사용자를 표현하기 위한 기본 자료구조
 {
-	UserInfo() {};
 
-	UserInfo(auto m_id)
-		:
+    UserInfo() {};
 
-	//유저 정보 초기화
-	UserInfo(auto id, auto password, int authority_level, int dormant_account)
-		:m_id(id), m_password(password), m_authority_level(authority_level), m_dormant_account(dormant_account) {}
-	~UserInfo() {};
+    //입력 받은 id가 배열에 존재하지 않으면 배열에 추가
+    UserInfo(input)
+    {
+        if (input != arrary_id) array_id = input
+    }
+
+    //유저 정보 초기화
+    UserInfo(int id, int password, int authority_level, int dormant_account)
+        :m_id(id),
+        m_password(password),
+        m_authority_level(authority_level),
+        m_dormant_account(dormant_account) {}
+    ~UserInfo() {};
 
 
-protected:
 
-	m_id;// User ID
-	m_password;// User Password
-	int m_authority_level;	//권한 레벨
-	bool m_dormant_account; //휴먼계정
+    char m_id;   //user ID
+    vectory* arrary_id;// user ID 배열 
+
+    char m_password;// user Password
+    vectory* array_password; // User Password 배열
+
+    int user_id_number;   //주민번호
+    int m_authority_level;   //권한 레벨
+    bool m_dormant_account; //휴먼계정
+    bool check_passed; //가입 대기 상태에 있는 유저 수
 };
-//USER_INFO
+//UserInfo
 
 
 //관리자를 표현하기 위한 기본 자료구조
-struct ADMIN_INFO
+struct AdminInfo
 {
-	
-};
-//ADMIN_INFO
+    AdminInfo() {}
 
-
-//서버를 표현하기 위한 기본 자료구조
-class Server_Info
-{
-	
-};
-//Server_Info
-
-
-class UserMode
-{
-
-public:
-	//필요한 멤버함수
 
 
 private:
-	struct UserInfo_user
-	{
-		//유저 권한 정의
-		define_authority() {}
+    std::string m_admin_code;
 
-		//유저 권한 받아오기
-		take_authority_level() {}
-	};
+};
+//AdminInfo
+
+
+//서버를 표현하기 위한 기본 자료구조
+class ServerInfo
+{
+public:
+
+    ServerInfo() {};
+    ~ServerInfo() {};
+
+    //서버 전체용량
+    int m_storage_capacity;
+    //서버 사용용량
+    double m_used_capacity;
+    //사용가능 용량
+    double m_avaible_capacity;
+    //파일크기
+    double file_volume;
+
+private:
+    //user_data 주민번호, pass
+};
+//ServerInfo
+
+
+class UserMode : public UserInfo
+{
+
+public:
+    //필요한 멤버함수
+
+       /*
+    현재 존재하는 유저 수를 제공
+    다른 정보 배열에 index의 기준제공
+    관리자에게 유저 수를 보낼 때,
+    */
+    vector.size(arrary_ID)
+    {
+        this.arrary_index;
+        return;
+    }
+
+    //현재 가입된 유저가 맞는지 확인하는 함수
+    CheckUserId(char input_id)
+    {
+        arrary_id
+
+    }
+
+    if (check_passed == 0)
+    {
+
+    }
+
+
+private:
+    struct UserInfo user
+    {
+        //유저 권한 정의
+        define_authority() {}
+
+        //유저 권한 받아오기
+        take_authority_level() {}
+    };
 };
 //UserMode
 
 
-class AdminMode
+class AdminMode : public AdminInfo
 {
 
 public:
-	//필요한 멤버함수
+    //필요한 멤버함수
 
+    //USER_INFO.check_passed를 수정할 수 있는 함수
+
+    //관리자 코드 변경 ,기본 0000
+    AdminMode(int input)
+        :m_admin_code(input) {}
 
 private:
-	struct AdminInfo admin;
+
+    struct AdminInfo admin;
+
 };
 //AdminMode
 
 
-class Server
+class Server :public ServerInfo
 {
 public:
-	//필요한 멤버함수
+    //필요한 멤버함수
+        //서버 전체용량
+    m_storage_capacity;
 
+    //파일크기
+    file_volume;
+
+    //서버 전체 용량 출력
+    void SendStorageCapacity()
+    {
+        std::cout << m_storage_capacity << std::endl;
+    }
+
+    //사용 가능 용량 계산
+    void CalculateCapacity()
+    {
+        //전체 사용용량 - 파일 크기의 집합을 다 더한 값
+        m_storage_capacity - array file_volume; 
+    }
+
+    //파일 업로드 시 서버의 파일 크기 배열에 추가
+    void CheckFileVlume()
+    {
+        array file_volume = file_volume;
+    }
+
+    //사용 용량 계산
+    double AddingAllFileVlume()
+    {
+        double sum
+        for (int i = 0; i > array file_volume.sizeof; i++)
+        {
+            sum += array file_volume[i];
+        }
+
+        return sum;
+    }
+
+    //서버 사용용량 초기화
+    m_used_capacity = AddingAllFileVlume();
+
+    //사용가능 용량
+    m_avaible_capacity = AddingAllFileVlume();
+
+
+    //파일 업로드
+
+    //파일 삭제
+
+    //파일 다운로드
+
+    //하드 용량 증가
+
+    //가입한 유저 저장 및 전송
+
+    //암호화
 
 private:
-	struct ServerInfo server;
+    struct ServerInfo server;
+
 };
 //Server
