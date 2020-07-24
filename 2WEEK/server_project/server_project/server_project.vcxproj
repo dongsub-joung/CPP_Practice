@@ -142,18 +142,9 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdminInfo.h" />
-    <ClInclude Include="AdminMode.h" />
-    <ClInclude Include="pseudo_code.h" />
-    <ClInclude Include="Server.h" />
-    <ClInclude Include="ServerInfo.h" />
-    <ClInclude Include="UserInfo.h" />
-    <ClInclude Include="userMode.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="AdminMode.cpp" />
     <ClCompile Include="Server.cpp" />
-    <ClCompile Include="userMode.cpp" />
+    <ClCompile Include="User.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
