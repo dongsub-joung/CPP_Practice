@@ -6,6 +6,7 @@ struct ServerInfo
 {
 public:
 
+//파일 데이터 
     struct File
     {
         std::string m_name; //파일 명
@@ -13,10 +14,12 @@ public:
 
         File() {};
         File(std::string input_name, double input_volume)
-            : {m_name = input_name, m_volume = input_volume};
+            : m_name(input_name), m_volume(input_volume) {};
         ~File() {};
     } File;
 
+
+//서버 데이터
     struct ServerCapacity
     {
     //서버 전체용량
@@ -41,15 +44,6 @@ public:
         m_avaible_capacity = 0;
         m_count_sharding = 3;
     };
-    
-    //파일 업로드 시 서버의 파일 구조체 생성 및 초기화
-    File ServerCapacity(std::string file_name, double file_volume)
-    {
-        File upload = new File(file_name, file_volume);
-      
-        <array> m_file_name = file_name;
-    }
-
     ~ServerCapacity() {};
 
     } ServerCapacity;
@@ -60,8 +54,7 @@ public:
 
 private:
     //user_data 주민번호, pass
-};
-//ServerInfo
+}ServerInfo;
 
 
 class Server
@@ -115,23 +108,24 @@ public:
     /* ####### 파일 ####### */
 
     //파일 업로드
-    void UploadFile(double file_volume)
+    void UploadFile()
     {
         //string 배열 path_file은 
-        string ID_file;
-        string path_file;
+        std::string ID_file;
+        double file_volume;
 
-        std::cout << "파일 경로를 입력하세요." << std::endl;
-        std::cin >> path_file;
         std::cout << "파일 이름을 입력하세요." << std::endl;
         std::cin >> ID_file;
         std::cout << "파일 크기를 입력하세요.(단위 MB)" << std::endl;
         std::cin >> file_volume;
 
-        server
-        (file_volume); //파일 크기 배열에 추가
+        new File[0];
+        File.m_name = ID_file;
+        File.m_volume = file_volume;
+        //파일 이름과 크기를 포함한 생성자
+        (ID_file, file_volume);
         
-        this.m_user_capacity = AddingAllFileVlume(); //기존 파일 크기의 배열의 sum값을 갱신
+        //this.m_user_capacity = AddingAllFileVlume(); //기존 파일 크기의 배열의 sum값을 갱신
     }
 
     //파일 다운로드, 삭제 하기 -> 파일 목록 나타내기
@@ -207,6 +201,7 @@ public:
 
 private:
     struct ServerInfo::ServerCapacity server_capacity;
+    struct ServerInfo::File File;
 
 };
 //Server
