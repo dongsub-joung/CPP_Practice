@@ -2,31 +2,60 @@
 #include <string>
 
 //서버를 표현하기 위한 기본 자료구조
-class ServerInfo
+struct ServerInfo
 {
 public:
 
+    struct File
+    {
+        std::string m_name; //파일 명
+        double m_volume;
+
+        File() {};
+        File(std::string input_name, double input_volume)
+            : {m_name = input_name, m_volume = input_volume};
+        ~File() {};
+    } File;
+
+    struct ServerCapacity
+    {
     //서버 전체용량
     double m_storage_capacity = 51200; //MB;
     //서버 사용용량
     double m_used_capacity;
     //사용가능 용량
     double m_avaible_capacity;
+    //증설 가능 횟수
+    int m_count_sharding;
 
     //파일 이름 배열: 파일 삭제
     <array> m_file_name;
     //파일크기 배열: 현재 용량 계산
     <array> m_file_volume;
 
-
-    ServerInfo() {};
-    
-    //파일 업로드 시 서버의 파일 크기 배열에 초기화
-    ServerInfo(double file_volume)
+    //기본 용량 50G, 용량 추가 3번
+    ServerCapacity()
     {
-        <array> m_file_volume = file_volume;
+        m_storage_capacity = 50;
+        m_used_capacity = 0;
+        m_avaible_capacity = 0;
+        m_count_sharding = 3;
+    };
+    
+    //파일 업로드 시 서버의 파일 구조체 생성 및 초기화
+    File ServerCapacity(std::string file_name, double file_volume)
+    {
+        File upload = new File(file_name, file_volume);
+      
+        <array> m_file_name = file_name;
     }
-    ~ ServerInfo() {};
+
+    ~ServerCapacity() {};
+
+    } ServerCapacity;
+
+
+
 
 
 private:
@@ -39,35 +68,52 @@ class Server
 {
 public:
 
+    
+    /* ####### 용량 ####### */
+   
     //서버 전체 용량 출력
     void SendStorageCapacity()
     {
-        std::cout << m_storage_capacity << std::endl;
+        std::cout << server_capacity.m_storage_capacity << std::endl;
     }
 
-    //사용 가능 용량 계산
+    //사용된 용량 계산
     void CalculateCapacity()
     {
-        //전체 사용용량 - 파일 크기의 집합을 다 더한 값
-        m_storage_capacity - array file_volume;
+        double used_capacity;
+
+
+        //각 파일의 용량의 합
+        for (int i = 0; i > <array> file_volume.sizeof; i++)
+        {
+            used_capacity += <array> file_volume[i];
+        }
+
+        //남은 용량 초기화
+        server_capacity.m_used_capacity = used_capacity;
+
+        //전체 용량-사용된 용량 = 남은 용량
+        server_capacity.m_avaible_capacity = server_capacity.m_storage_capacity - used_capacity;
+
     }
 
-    //사용 용량 계산
-    double AddingAllFileVlume()
+    //사용된 용량 출력
+    void ShowUsedCapacity()
     {
-        double sum
-            for(int i = 0; i > <array> file_volume.sizeof; i++)
-            {
-                sum += <array> file_volume[i];
-            }
-
-        return sum;
+        std::cout << server_capacity.m_used_capacity << std::endl;
     }
 
-    /*
-    서버 관련 변수
-    file_volume
-    */
+
+    //사용 가능 용량 출력
+    void ShowAvaibleCapacity()
+    {
+         std::cout << server_capacity.m_avaible_capacity << std::endl;
+    }
+
+
+
+    /* ####### 파일 ####### */
+
     //파일 업로드
     void UploadFile(double file_volume)
     {
@@ -82,7 +128,8 @@ public:
         std::cout << "파일 크기를 입력하세요.(단위 MB)" << std::endl;
         std::cin >> file_volume;
 
-        ServerInfo* server = new ServerInfo(file_volume); //파일 크기 배열에 추가
+        server
+        (file_volume); //파일 크기 배열에 추가
         
         this.m_user_capacity = AddingAllFileVlume(); //기존 파일 크기의 배열의 sum값을 갱신
     }
@@ -124,6 +171,15 @@ public:
 
 
     //하드 용량 증가
+    void Sharding()
+    {
+        double present_capacity = server.m_storage_capacity;
+        std::cout << "전체 시스템 용량을 증설합니다." << std::endl;
+        std::cout << "현재 전체 용량: "<< present_capacity << std::endl;
+
+    }
+
+
 
     //가입한 유저 저장 및 전송
 
@@ -150,10 +206,7 @@ public:
     }
 
 private:
-    struct ServerInfo server
-    {
-
-    };
+    struct ServerInfo::ServerCapacity server_capacity;
 
 };
 //Server
