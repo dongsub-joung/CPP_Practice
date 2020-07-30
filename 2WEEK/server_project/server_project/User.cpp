@@ -1,34 +1,5 @@
-//typedef 선언, 초기화
-struct UserInfo
-{
-    //m_arrary_index= id값 배열의 크기를 리턴한 값이다.
-    char ID[20];
-    char PassWord[20];
-    char UserIDNumber[13];	//주민번호, ""-""제외
-    int Authoritylevel;	//권한 레벨 Read=1, Write=2,both RW=3
 
-    void JoinUser()
-    {
-        string id, password, user_id_number;
-        int authority_level;
-
-        std::cout << "ID를 입력해주세요." << endl;
-        std::cin >> id;
-        std::cout << "PassWord를 입력해주세요." << endl;
-        std::cin >> password;
-        std::cout << "주민 번호를 입력해주세요." << endl;
-        std::cin >> user_id_number;
-        std::cout << "읽기만 원하면 1을, 쓰기만 원하면 2를, 둘다면 3을 입력해주세요." << endl;
-        std::cin >> authority_level;
-
-        UserInfo person_A{ id,password,user_id_number,authority_level; };
-        // 객체 person_A 생성 및 serverInfo의 server에 arrary에 저장? 레퍼런스?
-    }
-
-}UserInfo;
-
-
-class UserMode : public UserInfo
+class UserMode 
 {
 
 public:
