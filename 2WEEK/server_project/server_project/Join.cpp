@@ -12,27 +12,19 @@ struct UserInfo
     UserInfo() {};
     ~UserInfo() {};
 
-    //m_arrary_index= id값 배열의 크기를 리턴한 값이다.
-} UserInfo;
-
-class Join
-{
-public:
-
-    //회원가입
-    void JoinUser()
+    UserInfo(char id, char password, char user_id_number)
     {
-        
-        char id;
-        char password;
-        char user_id_number;
-
         cout << "ID를 입력해주세요." << endl;
         cin >> id;
         cout << "PassWord를 입력해주세요." << endl;
         cin >> password;
         cout << "주민 번호를 입력해주세요." << endl;
         cin >> user_id_number;
-
+        m_ID = id;
+            
     }
-};
+
+
+    //m_arrary_index= id값 배열의 크기를 리턴한 값이다.
+} UserInfo;
+

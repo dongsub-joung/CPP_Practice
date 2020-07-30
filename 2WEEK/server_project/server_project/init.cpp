@@ -102,7 +102,8 @@ void main()
 
 	case 3:
 		cout << "회원가입을 진행합니다." << endl;
-		void Join::JoinUser();
+		Join();
+
 
 	default:
 		cout << "항목에 없는 숫자입니다." << endl;
