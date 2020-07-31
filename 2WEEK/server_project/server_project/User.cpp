@@ -1,3 +1,5 @@
+#include "stdafx.h"
+#include "ServerInfo.h
 
 class UserMode 
 {

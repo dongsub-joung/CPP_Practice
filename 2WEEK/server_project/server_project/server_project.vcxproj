@@ -144,15 +144,17 @@
   <ItemGroup>
     <ClCompile Include="AdminMode.cpp" />
     <ClCompile Include="init.cpp" />
-    <ClCompile Include="Join.cpp" />
     <ClCompile Include="Login.cpp" />
-    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="ServerCapacity.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Admin.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="ServerCapacity.h" />
     <ClInclude Include="ServerInfo.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UserInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
