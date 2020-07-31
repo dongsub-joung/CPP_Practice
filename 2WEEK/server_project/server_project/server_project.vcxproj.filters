@@ -18,19 +18,22 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdminMode.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="User.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="init.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Login.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ServerCapacity.cpp">
+    <ClCompile Include="Server_Class.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerCapacity_Class.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UserMode_Class.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminMode_Class.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,19 +41,22 @@
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Admin.h">
+    <ClInclude Include="File_Struct.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ServerInfo.h">
+    <ClInclude Include="ServerCapacity_struct.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="File.h">
+    <ClInclude Include="Server_Class.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ServerCapacity.h">
+    <ClInclude Include="UserInfo_Struct.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="UserInfo.h">
+    <ClInclude Include="AdminInfo_Struct.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerInfo_Struct.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

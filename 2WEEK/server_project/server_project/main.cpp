@@ -3,12 +3,7 @@
 
 using namespace std;
 
-enum authority_level
-{
-	Read_only,
-	Write_only,
-	Both
-};
+
 
 int m_authority_level = Read_only;	//권한 레벨 Read=1, Write=1,1,,both RW=1,1,1
 

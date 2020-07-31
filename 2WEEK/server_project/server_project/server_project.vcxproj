@@ -142,19 +142,21 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdminMode.cpp" />
-    <ClCompile Include="init.cpp" />
+    <ClCompile Include="AdminMode_Class.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Login.cpp" />
-    <ClCompile Include="ServerCapacity.cpp" />
-    <ClCompile Include="User.cpp" />
+    <ClCompile Include="ServerCapacity_Class.cpp" />
+    <ClCompile Include="Server_Class.cpp" />
+    <ClCompile Include="UserMode_Class.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Admin.h" />
-    <ClInclude Include="File.h" />
-    <ClInclude Include="ServerCapacity.h" />
-    <ClInclude Include="ServerInfo.h" />
+    <ClInclude Include="AdminInfo_Struct.h" />
+    <ClInclude Include="File_Struct.h" />
+    <ClInclude Include="ServerCapacity_struct.h" />
+    <ClInclude Include="ServerInfo_Struct.h" />
+    <ClInclude Include="Server_Class.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="UserInfo.h" />
+    <ClInclude Include="UserInfo_Struct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
