@@ -1,9 +1,7 @@
 #include "stdafx.h"
-#include "UserInfo.h"
+#include "UserInfo_Struct.h"
 
 class Login
 {
 	
-	Login(inputedID, inputedPassword);
-
 };
