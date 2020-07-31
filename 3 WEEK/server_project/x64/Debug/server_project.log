@@ -1,0 +1,10 @@
+﻿  AdminMode.cpp
+C:\Users\정인섭\Documents\GitHub\CPP_Practice\2WEEK\server_project\server_project\AdminMode.h(9,19): error C2079: 'AdminMode::admin'은(는) 정의되지 않은 struct 'AdminInfo'을(를) 사용합니다.
+  Server.cpp
+C:\Users\정인섭\Documents\GitHub\CPP_Practice\2WEEK\server_project\server_project\server.h(10,20): error C2079: 'Server::server'은(는) 정의되지 않은 struct 'ServerInfo'을(를) 사용합니다.
+  userMode.cpp
+C:\Users\정인섭\Documents\GitHub\CPP_Practice\2WEEK\server_project\server_project\userMode.h(18,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\정인섭\Documents\GitHub\CPP_Practice\2WEEK\server_project\server_project\userMode.h(18,23): warning C4183: 'define_authority': 반환 형식이 없습니다. 'int'를 반환하는 멤버 함수로 간주됩니다.
+C:\Users\정인섭\Documents\GitHub\CPP_Practice\2WEEK\server_project\server_project\userMode.h(21,26): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\정인섭\Documents\GitHub\CPP_Practice\2WEEK\server_project\server_project\userMode.h(21,27): warning C4183: 'take_authority_level': 반환 형식이 없습니다. 'int'를 반환하는 멤버 함수로 간주됩니다.
+  코드를 생성하고 있습니다...
